@@ -1,0 +1,156 @@
+{
+    "task_name": "自動刷活動 (Flow)",
+    "description": "全流程：選單 -> 標籤 -> 關卡 -> 挑戰 -> 跳過 -> 結算 (JSON驅動)",
+    "icon": "SYNC",
+    "config": {
+        "關卡模式": {
+            "type": "drop_down",
+            "options": [
+                "最高難度",
+                "較弱關卡"
+            ],
+            "default": "最高難度"
+        },
+        "體力耗盡時": {
+            "type": "drop_down",
+            "options": [
+                "停止腳本",
+                "喝100體力水",
+                "喝滿體力水"
+            ],
+            "default": "停止腳本"
+        },
+        "挑戰次數": {
+            "default": 99
+        },
+        "辨識門檻": {
+            "default": 0.75
+        }
+    },
+    "loop": {
+        "count_key": "挑戰次數",
+        "threshold_key": "辨識門檻"
+    },
+    "steps": [
+        {
+            "id": "stamina_check",
+            "label": "體力耗盡偵測",
+            "feature": "09",
+            "action": "conditional",
+            "priority": 100,
+            "config_key": "體力耗盡時",
+            "branches": {
+                "停止腳本": {
+                    "action": "stop",
+                    "message": "❌ 體力耗盡，已自動停止腳本。"
+                },
+                "喝100體力水": {
+                    "action": "sequence",
+                    "steps": [
+                        {
+                            "feature": "10",
+                            "label": "喝100體力水",
+                            "sleep_after": 0.5
+                        },
+                        {
+                            "feature": "12",
+                            "label": "確認回復",
+                            "sleep_after": 2.0,
+                            "message": "✔ 已回復體力！"
+                        }
+                    ]
+                },
+                "喝滿體力水": {
+                    "action": "sequence",
+                    "steps": [
+                        {
+                            "feature": "11",
+                            "label": "喝滿體力水",
+                            "sleep_after": 0.5
+                        },
+                        {
+                            "feature": "12",
+                            "label": "確認回復",
+                            "sleep_after": 2.0,
+                            "message": "✔ 已回復滿體！"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "reward_screen",
+            "label": "獎勵畫面",
+            "feature": "08",
+            "action": "click",
+            "priority": 90
+        },
+        {
+            "id": "result_screen",
+            "label": "RESULT畫面",
+            "feature": "07",
+            "action": "click",
+            "priority": 80
+        },
+        {
+            "id": "confirm",
+            "label": "確定結算",
+            "feature": "06",
+            "action": "click",
+            "priority": 70
+        },
+        {
+            "id": "all_skip",
+            "label": "ALL SKIP",
+            "feature": "05",
+            "action": "click",
+            "priority": 60
+        },
+        {
+            "id": "challenge",
+            "label": "進行挑戰",
+            "feature": "04",
+            "action": "click",
+            "priority": 50,
+            "on_success": "increment_count"
+        },
+        {
+            "id": "select_stage",
+            "label": "最高難度關卡",
+            "feature": "03",
+            "action": "click",
+            "priority": 40,
+            "variants": {
+                "關卡模式": {
+                    "較弱關卡": {
+                        "feature": "03-weak",
+                        "label": "較弱關卡"
+                    }
+                }
+            }
+        },
+        {
+            "id": "recommend_menu",
+            "label": "推薦選單",
+            "feature": "02",
+            "action": "click",
+            "priority": 30
+        },
+        {
+            "id": "contest_menu",
+            "label": "競賽選單",
+            "feature": "01",
+            "action": "click",
+            "priority": 20
+        }
+    ],
+    "idle": {
+        "message": "⏳ 等待畫面載入中..",
+        "click": {
+            "x": 0.72,
+            "y": 0.20,
+            "variance": 0.01
+        },
+        "sleep": 1.0
+    }
+}
