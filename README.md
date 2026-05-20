@@ -1,6 +1,8 @@
 <div align="center">
+  <img src="https://koeitecmo.wordpress.com/wp-content/uploads/2019/03/peach_logo_rgb.jpg?w=1024" width="100%" alt="OKDOAXVV Banner"/>
+
   <h1 align="center">
-    <img src="icons/icon.png" width="200" alt="OKDOAXVV logo"/>
+    <img src="icons/icon.png" width="120" alt="OKDOAXVV logo"/>
     <br/>
     OKDOAXVV
   </h1> 
