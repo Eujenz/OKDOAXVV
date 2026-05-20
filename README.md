@@ -1,171 +1,149 @@
-## ok-script boilerplate
-ok-script模板项目, 用于fork后快速开始你的项目
-
-## ok-script文档和示例代码
-
-* [游戏自动化入门](https://github.com/ok-oldking/ok-script/blob/master/docs/intro_to_automation/README.md)
-* [快速开始](https://github.com/ok-oldking/ok-script/blob/master/docs/quick_start/README.md)
-* [进阶使用](https://github.com/ok-oldking/ok-script/blob/master/docs/after_quick_start/README.md)
-* [API文档](https://github.com/ok-oldking/ok-script/blob/master/docs/api_doc/README.md)
-* 开发者群: 938132715
-
-#### 文件说明
-```
-src/tasks/ 任务类
-src/config.py 项目配置
-tests 自动化测试用例
-deploy.txt 同步到更新库的文件列表, 如tests文件夹
-main.py 入口
-main_debug.py debug入口
-pyappify.yml 打包exe配置文件
-i18n 国际化文件, 可选
-assets cv2使用的template, 需要使用coco格式
-.github/workflows/build.yml 自动化构建任务
-```
-
-## 以下为ok-ww示例README.md
-
 <div align="center">
   <h1 align="center">
-    <img src="icon.png" width="200" alt="ok-ww logo"/>
+    <img src="icons/icon.png" width="200" alt="OKDOAXVV logo"/>
     <br/>
-    ok-ww
+    OKDOAXVV
   </h1> 
   
   <p>
-    一个基于图像识别的鸣潮自动化程序，支持后台运行，基于 <a href="https://github.com/ok-oldking/ok-script">ok-script</a> 开发。
+    一個基於圖像識別的《死或生：沙灘排球 女神假期》自動化程序，支援後台執行，基於 <a href="https://github.com/ok-oldking/ok-script">ok-script</a> 框架開發。
     <br />
-    An image-recognition-based automation tool for Wuthering Waves, with background mode support, developed with <a href="https://github.com/ok-oldking/ok-script">ok-script</a>.
+    An image-recognition-based automation tool for DOAXVV, with background mode support, developed with <a href="https://github.com/ok-oldking/ok-script">ok-script</a>.
   </p>
   
-  <p><i>通过模拟 Windows 用户接口进行操作，无内存读取、无文件修改</i></p>
+  <p><i>通過模擬 Windows 用戶接口進行操作，無記憶體讀取、無檔案修改，融合擬人化滑鼠軌跡與行為節奏管理</i></p>
 </div>
 
 <!-- Badges -->
 <div align="center">
   
 ![平台](https://img.shields.io/badge/platform-Windows-blue)
-[![GitHub release](https://img.shields.io/github/v/release/ok-oldking/ok-wuthering-waves)](https://github.com/ok-oldking/ok-wuthering-waves/releases)
-[![总下载量](https://img.shields.io/github/downloads/ok-oldking/ok-wuthering-waves/total)](https://github.com/ok-oldking/ok-wuthering-waves/releases)
+[![GitHub release](https://img.shields.io/github/v/release/Eujenz/OKDOAXVV)](https://github.com/Eujenz/OKDOAXVV/releases)
+[![總下載量](https://img.shields.io/github/downloads/Eujenz/OKDOAXVV/total)](https://github.com/Eujenz/OKDOAXVV/releases)
 [![Discord](https://img.shields.io/discord/296598043787132928?color=5865f2&label=%20Discord)](https://discord.gg/vVyCatEBgA)
 
 </div>
 
-### [English Readme](README_en.md) | 中文说明
-
-**演示与教程:** [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://youtu.be/h6P1KWjdnB4)
-
 ---
 
-## ⚠️ 免责声明
+## ⚠️ 免責聲明
 
-本软件为外部辅助工具，旨在自动化《鸣潮》的部分游戏流程。它完全通过模拟常规用户界面与游戏交互，遵循相关法律法规。本项目旨在简化用户的重复性操作，不会破坏游戏平衡或提供不公平优势，也绝不会修改任何游戏文件或数据。
+本軟體為外部輔助工具，旨在自動化《死或生：沙灘排球 女神假期》（DOAXVV）的部分遊戲流程（例如自動挑戰活動關卡）。它完全通過模擬常規 Windows 用戶介面與遊戲進行背景交互，遵循相關法律法規。本專案旨在簡化用戶的重複性點擊操作，不會破壞遊戲平衡或提供不公平優勢，也絕不會修改任何遊戲檔案或記憶體數據。
 
-本软件开源、免费，仅供个人学习与交流使用，请勿用于任何商业或营利性目的。开发者团队拥有本项目的最终解释权。因使用本软件而产生的任何问题，均与本项目及开发者无关。
+本軟體開源、免費，僅供個人學習與交流使用，請勿用於任何商業或營利性目的。開發者團隊擁有本專案的最終解釋權。因使用本軟體而產生的任何問題，均與本專案及開發者無關。
 
-请注意，根据库洛官方的《鸣潮》公平运营声明：
-> 严禁利用任何第三方工具破坏游戏体验。
-> 我们将严厉打击使用外挂、加速器、作弊软件、宏脚本等违规工具的行为，这些行为包括但不限于自动挂机、技能加速、无敌模式、瞬移、修改游戏数据等操作。
-> 一经查证，我们将视违规情况和次数，采取包括但不限于扣除违规收益、冻结或永久封禁游戏账号等措施。
+**使用本軟體即表示您已閱讀、理解並同意以上聲明，並自願承擔一切潛在風險。**
 
-**使用本软件即表示您已阅读、理解并同意以上声明，并自愿承担一切潜在风险。**
-
-## 🚀 快速开始
-
-1.  **下载安装包**：从下方的“下载渠道”中选择一个，下载最新的 `ok-ww-win32-China-setup.exe` 安装文件。
-2.  **安装程序**：双击 `ok-ww-win32-China-setup.exe` 文件，并按照安装向导的提示完成安装。
-3.  **运行程序**：安装完成后，从桌面快捷方式或开始菜单启动 `ok-ww` 即可。
-
-## 📥 下载渠道
-
-*   **[GitHub](https://github.com/ok-oldking/ok-wuthering-waves/releases)**: 官方发布页，全球访问速度快。（**请下载 `setup.exe` 安装包，而不是 `Source Code` 源码压缩包**）
-*   **[Mirror酱](https://mirrorchyan.com/zh/projects?rid=okww&source=ok-ww-readme)**: 国内镜像，下载可能需要购买其平台的 CD-KEY。
-*   **[夸克网盘](https://pan.quark.cn/s/a1052cec4d13)**: 国内网盘，免费，但需要注册并使用其客户端下载。
+---
 
 ## ✨ 主要功能
-<img width="1774" height="1182" alt="QQ_1762960844719" src="https://github.com/user-attachments/assets/c5eb0145-0d45-44f9-85b3-184de0ef20bf" />
 
-*   **高分辨率支持**: 流畅运行于 4K 及以下所有 16:9 分辨率（最低 1600x900）。部分功能兼容 21:9 等超宽屏。
-*   **后台模式**: 支持游戏窗口最小化或被遮挡时在后台运行，不影响您使用电脑。
-*   **智能识别**: 全角色自动识别，无需手动配置技能序列，一键启动。
-*   **自动静音**: 在后台运行时，可自动将游戏静音。
-
-## 🔧 疑难解答 (Troubleshooting)
-
-如果遇到问题，请在提问前按以下步骤逐一排查：
-
-1.  **安装路径**：请确保软件安装在**纯英文路径**下（例如 `D:\Games\ok-ww`），不要安装在 `C:\Program Files` 或包含中文字符的文件夹中。
-2.  **杀毒软件**：将软件的安装目录添加到您的杀毒软件（包括 Windows Defender）的**信任区或白名单**中，以防文件被误删或拦截。
-3.  **显示设置**：
-    *   关闭所有显卡滤镜（如 NVIDIA Game Filter）和锐化功能。
-    *   使用游戏默认的亮度设置。
-    *   关闭任何在游戏画面上显示信息的叠加层（如 MSI Afterburner、Fraps 等显示的帧率）。
-4.  **自定义按键**：如果您修改了游戏内的默认按键，请务必在 `ok-ww` 的设置中进行同步配置。仅支持设置中列出的按键。
-5.  **软件版本**：检查并确保您使用的是最新版本的 `ok-ww`。
-6.  **游戏性能**：请确保游戏能稳定在 **60 FPS** 运行。如果帧率不稳定，请尝试降低游戏画质或分辨率。
-7.  **游戏断线**：如频繁遇到与服务器断开连接的问题，可以尝试先手动打开游戏运行5分钟后再启动本工具，或在断线后直接重新登录，不要退出游戏。
-8.  **寻求帮助**：如果以上步骤都无法解决您的问题，请通过社区渠道提交详细的错误报告。
-9.  **关闭自动奔跑**：游戏设置里关闭自动奔跑。
+*   **完全背景執行模式**: 基於 Windows `PostMessage` 接口發送點擊與移動，支援遊戲視窗最小化或被遮擋時在背景流暢運行，絲毫不影響您日常使用電腦。
+*   **擬人化滑鼠移動軌跡**: 獨創的**二次貝氏曲線（Bezier Curve）**滑鼠模擬，加入非線性平滑加減速曲線（Smoothstep）與末端逼真手震（Jitter）校正，徹底擺脫機械式瞬移點擊。
+*   **次世代擬人化行為引擎**:
+    *   **費茨法則（Fitts's Law）**：按鈕越小點擊按壓時間越長，大按鈕則自信快速點擊。
+    *   **反應時間對數常態分佈**：符合人類生理學的非對稱「長尾反應延遲」統計。
+    *   **AR(1) 時間自相關噪聲**：模擬真實人類節奏慣性與分心延遲，並伴隨隨機的「節奏突變」。
+    *   **S型疲勞曲線模型**：隨著運行時間增長累積疲勞度，操作節奏隨之產生擬真衰退與閒置恢復。
+    *   **隨機泊松微休息**：無固定週期、非預測性的微休息（放空），防範作弊偵測系統。
+*   **JSON-Driven 彈性流程**: 關卡挑戰邏輯與步驟優先級完全解耦至 JSON 配置，有 15% 的隨機眼殘交換步驟檢查順序，完全模擬真人視線。
+*   **自癒與模板開發工具鏈**:
+    *   `TemplateMakerTask.py`：遊戲內即時截圖、框選、白底遮罩裁剪與 COCO result.json 完美寫入一氣呵成。
+    *   `JsonFixerTask.py`：當用戶手動變更或重命名實體圖片，一鍵以 OpenCV 反推按鈕 bbox 重建 result.json 配置文件。
+    *   `preflight.py`：啟動前自動預檢過濾失效圖片，防止框架崩潰。
 
 ---
 
-## 💻 开发者专区
+## 🚀 快速開始
 
-### 从源码运行 (Python)
+1.  **環境需求**：本項目基於 **Python 3.12** 開發，請確保您已安裝對應版本。
+2.  **以管理員權限開啟終端機**（CMD / PowerShell）或您的 IDE（PyCharm, VSCode 等）。
+3.  **複製並安裝依賴項目**：
+    ```bash
+    pip install -r requirements.txt --upgrade
+    ```
+4.  **運行程序**：
+    *   **運行 Release 正常版本**：
+        ```bash
+        python main.py
+        ```
+    *   **運行 Debug 開發調試版本**：
+        ```bash
+        python main_debug.py
+        ```
 
-本项目仅支持 Python 3.12 版本, 必须以管理员权限启动CMD, PyCharm, VSCode。
+---
 
-```bash
-# 安装或更新依赖
-pip install -r requirements.txt --upgrade
+## ⚙️ 專案文件說明
 
-# 运行 Release 版本
-python main.py
-
-# 运行 Debug 版本
-python main_debug.py
+```
+├─ assets/               # CV2 使用的範本圖片與配置
+│  ├─ images/            # 模板按鈕裁剪圖片 (.png)
+│  └─ result.json        # COCO 格式的模板特徵座標 JSON 檔
+├─ backend/              # 可選 Web 服務後端配置
+├─ configs/              # 本地設定檔儲存資料夾
+├─ docs/                 # 說明文件檔
+├─ flows/                # JSON 驅動之自動化工作流檔案
+│  └─ event_farming.json # 自動刷活動流程定義檔
+├─ icons/                # 程式 UI 圖標
+├─ src/                  # 核心代碼庫
+│  ├─ tasks/             # 各式任務定義
+│  │  ├─ MyBaseTask.py       # 底層任務，包含貝氏曲線滑鼠移動軌跡
+│  │  ├─ HumanBehavior.py    # 核心擬人化行為與延遲模擬引擎
+│  │  ├─ FlowRunnerTask.py   # JSON 工作流執行器
+│  │  ├─ TemplateMakerTask.py# 快速模板擷取與 JSON 登錄工具
+│  │  └─ JsonFixerTask.py    # 自癒式 result.json 魔法修復工具
+│  ├─ config.py          # 程式初始化全域設定檔
+│  ├─ globals.py         # 全域單例
+│  └─ preflight.py       # 預檢機制，啟動前防崩潰過濾器
+├─ main.py               # 正式入口
+├─ main_debug.py         # 除錯入口
+└─ pyappify.yml          # exe 打包設定檔
 ```
 
-### 命令行参数
+---
 
-您可以通过命令行参数实现自动化启动。
+## 🔧 疑難解答 (Troubleshooting)
+
+如果遇到問題，請在提問前按以下步驟逐一排查：
+
+1.  **安裝路徑**：請確保專案位於**純英文路徑**下，避免中文字符與空白字元。
+2.  **螢幕顯示與縮放**：
+    *   建議將 Windows 的「螢幕顯示與縮放比例」設定為 `100%`。
+    *   關閉所有顯卡濾鏡（如 NVIDIA 濾鏡）與銳化設定，維持遊戲默認亮度。
+3.  **殺毒軟件與防火牆**：將執行路徑或打包後的 `.exe` 目錄加入 Windows Defender 或第三方防毒軟體的排除名單，防範 PostMessage 指令發送被誤攔截。
+4.  **遊戲解析度與畫面**：
+    *   支援 16:9 分辨率，若畫面拉伸可能會導致圖片匹配精度降低。
+    *   確保遊戲能穩定於 60 FPS 運行以確保滑鼠移動物理模擬軌跡符合時序。
+
+---
+
+## 💻 命令行參數
+
+您可透過指令參數實現腳本快速調用或自動執行：
 
 ```bash
-# 示例：启动后自动执行第一个任务（一条龙），并在任务完成后退出程序
-ok-ww.exe -t 1 -e
+# 啟動後自動執行任務列表中的第一個任務，完成後自動退出
+python main.py -t 1 -e
 ```
 
-*   `-t` 或 `--task`: 启动后自动执行第 N 个任务。`1` 代表任务列表中的第一个。
-*   `-e` 或 `--exit`: 任务执行完毕后自动退出程序。
+*   `-t` 或 `--task`: 啟動自動執行的第 N 個任務（由 1 開始計算）。
+*   `-e` 或 `--exit`: 任務完全結束後自動關閉整個腳本介面。
 
-## 💬 加入我们
+---
 
-*   **QQ 交流群**: `462079653` (入群答案: `老王同学OK`)
-*   **QQ 频道**: [点击加入](https://pd.qq.com/s/djmm6l44y) (群满或获取最新资讯)
-*   **开发者群**: `926858895` ( **注意**: 此群仅面向有开发能力、希望参与贡献的开发者，入群前请确保您已能够从源码成功运行项目。)
+## 🔗 基於 ok-script 的其他優秀專案：
 
-本项目基于 [ok-script](https://github.com/ok-oldking/ok-script) 框架开发，核心代码仅约 3000 行 (Python)，简单易维护。欢迎有兴趣的开发者使用 [ok-script](https://github.com/ok-oldking/ok-script) 开发您自己的自动化项目。
+* 鳴潮 [ok-wuthering-waves](https://github.com/ok-oldking/ok-wuthering-waves)
+* 明日方舟:終末地 [ok-end-field](https://github.com/ok-oldking/ok-end-field)
+* 少前2 [ok-gf2](https://github.com/ok-oldking/ok-gf2)
+* 星鐵 [ok-starrailassistant](https://github.com/Shasnow/ok-starrailassistant)
+* 星痕共鳴 [ok-star-resonance](https://github.com/Sanheiii/ok-star-resonance)
 
-## 🔗 使用ok-script的项目：
+---
 
-* 鸣潮 [https://github.com/ok-oldking/ok-wuthering-wave](https://github.com/ok-oldking/ok-wuthering-waves)
-* 明日方舟:终末地 [https://github.com/ok-oldking/ok-ef](https://github.com/ok-oldking/ok-end-field)
-* 原神(停止维护,
-  但是后台过剧情可用) [https://github.com/ok-oldking/ok-genshin-impact](https://github.com/ok-oldking/ok-genshin-impact)
-* 少前2 [https://github.com/ok-oldking/ok-gf2](https://github.com/ok-oldking/ok-gf2)
-* 星铁 [https://github.com/Shasnow/ok-starrailassistant](https://github.com/Shasnow/ok-starrailassistant)
-* 星痕共鸣 [https://github.com/Sanheiii/ok-star-resonance](https://github.com/Sanheiii/ok-star-resonance)
-* 二重螺旋 [https://github.com/BnanZ0/ok-duet-night-abyss](https://github.com/BnanZ0/ok-duet-night-abyss)
-* 白荆回廊(停止更新) [https://github.com/ok-oldking/ok-baijing](https://github.com/ok-oldking/ok-baijing)
+## ❤️ 贊助與致謝
 
-
-## ❤️ 赞助与致谢
-
-### 赞助商 (Sponsors)
-*   **EXE 签名**: Free code signing provided by [SignPath.io](https://signpath.io/), certificate by [SignPath Foundation](https://signpath.org/).
-
-### 致谢
-*   [lazydog28/mc_auto_boss](https://github.com/lazydog28/mc_auto_boss)
-*   [ok-oldking/OnnxOCR](https://github.com/ok-oldking/OnnxOCR)
+### 致謝 (Acknowledgements)
+*   [ok-script 官方框架](https://github.com/ok-oldking/ok-script)
 *   [zhiyiYo/PyQt-Fluent-Widgets](https://github.com/zhiyiYo/PyQt-Fluent-Widgets)
-*   [Toufool/AutoSplit](https://github.com/Toufool/AutoSplit)
