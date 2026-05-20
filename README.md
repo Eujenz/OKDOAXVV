@@ -1,12 +1,7 @@
 <div align="center">
   <img src="https://koeitecmo.wordpress.com/wp-content/uploads/2019/03/peach_logo_rgb.jpg?w=1024" width="100%" alt="OKDOAXVV Banner"/>
 
-  <h1 align="center">
-    <img src="icons/icon.png" width="120" alt="OKDOAXVV logo"/>
-    <br/>
-    OKDOAXVV
-  </h1> 
-  
+ 
   <p>
     一個基於圖像識別的《死或生：沙灘排球 女神假期》自動化程序，支援後台執行，基於 <a href="https://github.com/ok-oldking/ok-script">ok-script</a> 框架開發。
     <br />
