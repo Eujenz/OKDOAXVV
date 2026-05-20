@@ -1,15 +1,16 @@
 {
-    "task_name": "自動刷活動 (Flow)",
-    "description": "全流程：選單 -> 標籤 -> 關卡 -> 挑戰 -> 跳過 -> 結算 (JSON驅動)",
+    "task_name": "自動刷活動",
+    "description": "全流程：選單 -> 標籤 -> 關卡 -> 挑戰 -> 跳過 -> 結算",
     "icon": "SYNC",
     "config": {
         "關卡模式": {
             "type": "drop_down",
             "options": [
-                "最高難度",
-                "較弱關卡"
+                "關卡3",
+                "關卡4",
+                "關卡5"
             ],
-            "default": "最高難度"
+            "default": "關卡4"
         },
         "體力耗盡時": {
             "type": "drop_down",
@@ -116,15 +117,23 @@
         },
         {
             "id": "select_stage",
-            "label": "最高難度關卡",
-            "feature": "03",
+            "label": "選擇關卡",
+            "feature": "03-4",
             "action": "click",
             "priority": 40,
             "variants": {
                 "關卡模式": {
-                    "較弱關卡": {
-                        "feature": "03-weak",
-                        "label": "較弱關卡"
+                    "關卡3": {
+                        "feature": "03-3",
+                        "label": "關卡3"
+                    },
+                    "關卡4": {
+                        "feature": "03-4",
+                        "label": "關卡4"
+                    },
+                    "關卡5": {
+                        "feature": "03-5",
+                        "label": "關卡5"
                     }
                 }
             }
@@ -147,7 +156,7 @@
     "idle": {
         "message": "⏳ 等待畫面載入中..",
         "click": {
-            "x": 0.72,
+            "x": 0.32,
             "y": 0.20,
             "variance": 0.01
         },

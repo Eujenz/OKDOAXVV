@@ -105,8 +105,7 @@ config = {
     'version': version, #版本
     'my_app': ['src.globals', 'Globals'], #可选. 全局单例对象, 可以存放加载的模型, 使用og.my_app调用
     'onetime_tasks': [  # 用户点击触发的任务
-        ["src.tasks.EventFarmingFlow", "EventFarmingFlow"],       # 🆕 JSON 驅動版
-        # ["src.tasks.EventFarmingTask", "EventFarmingTask"],     # 舊版 (純 Python)，需要時取消註解
+        ["src.tasks.EventFarmingFlow", "EventFarmingFlow"],
         ["src.tasks.TemplateMakerTask", "TemplateMakerTask"],
         ["src.tasks.JsonFixerTask", "JsonFixerTask"],             # 緊急修復用
         ["ok", "DiagnosisTask"],

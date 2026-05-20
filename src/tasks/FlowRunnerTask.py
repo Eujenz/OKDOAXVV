@@ -140,7 +140,8 @@ class FlowRunnerTask(MyBaseTask):
     # ── 主迴圈 ──────────────────────────────────────────
 
     def run(self):
-        # 重置擬人化狀態
+        # 重置狀態
+        self._should_stop = False
         self._human.reset()
 
         loop_cfg = self.flow.get('loop', {})
